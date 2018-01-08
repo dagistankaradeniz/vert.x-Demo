@@ -9,8 +9,8 @@ public class MainVerticle extends AbstractVerticle {
         vertx.createHttpServer().requestHandler(req -> {
               req.response()
                 .putHeader("content-type", "text/html")
-                .end("Hello from Vert.x!");
+                .end("<h1>Hello from Vert.x!</h1>");
             }).listen(8080);
-        System.out.println("<h1>HTTP server started on port 8080</h1>");
+        System.out.println("HTTP server started on port 8080");
     }
 }
